@@ -45,7 +45,7 @@
             btn2 = new Button();
             btn1 = new Button();
             button17 = new Button();
-            button18 = new Button();
+            btncoco = new Button();
             btn0 = new Button();
             button20 = new Button();
             SimpleCalculator = new Label();
@@ -235,15 +235,15 @@
             button17.Text = "-";
             button17.UseVisualStyleBackColor = true;
             // 
-            // button18
+            // btncoco
             // 
-            button18.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            button18.Location = new Point(188, 417);
-            button18.Name = "button18";
-            button18.Size = new Size(75, 44);
-            button18.TabIndex = 18;
-            button18.Text = ".";
-            button18.UseVisualStyleBackColor = true;
+            btncoco.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            btncoco.Location = new Point(188, 417);
+            btncoco.Name = "btncoco";
+            btncoco.Size = new Size(75, 44);
+            btncoco.TabIndex = 18;
+            btncoco.Text = ".";
+            btncoco.UseVisualStyleBackColor = true;
             // 
             // btn0
             // 
@@ -302,7 +302,7 @@
             Controls.Add(txtTop);
             Controls.Add(SimpleCalculator);
             Controls.Add(button17);
-            Controls.Add(button18);
+            Controls.Add(btncoco);
             Controls.Add(btn0);
             Controls.Add(button20);
             Controls.Add(btnPlus);
@@ -346,7 +346,7 @@
         private Button btn2;
         private Button btn1;
         private Button button17;
-        private Button button18;
+        private Button btncoco;
         private Button btn0;
         private Button button20;
         private Label SimpleCalculator;
