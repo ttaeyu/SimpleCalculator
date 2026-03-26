@@ -297,6 +297,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Blue;
             ClientSize = new Size(380, 473);
             Controls.Add(txtBottom);
             Controls.Add(txtTop);
