@@ -4,6 +4,7 @@ namespace SimpleCalculator
     {
         int n1 = 0;
         string currentNum = "";
+        string op = "";
         public Form1()
         {
             InitializeComponent();
@@ -32,13 +33,24 @@ namespace SimpleCalculator
         private void btnEqual_Click(object sender, EventArgs e)
         {
             int n2 = int.Parse(currentNum); // 두 번째 숫자 가져오기
-            int sum = n1 + n2;              // 더하기 계산!
+            int result = 0; // 결과값을 담을 바구니
 
-            // 🌟 1. 위쪽 창: 기존 식 뒤에 "="과 "결과"를 이어 붙여줍니다. (예: 1+1 뒤에 =2 붙임)
-            txtTop.Text += "=" + sum.ToString();
+            // 🌟 어떤 연산자(op)를 눌렀느냐에 따라 계산기가 머리를 씁니다!
+            if (op == "+") result = n1 + n2;
+            else if (op == "-") result = n1 - n2;
+            else if (op == "*") result = n1 * n2;
+            else if (op == "/")
+            {
+                if (n2 != 0) result = n1 / n2;
+                else { MessageBox.Show("0으로 나눌 수 없습니다!"); return; }
+            }
 
-            // 🌟 2. 아래쪽 창: 깔끔하게 "결과" 하나만 딱! 띄워줍니다.
-            txtBottom.Text = sum.ToString();
+            // 결과 출력
+            txtTop.Text += "=" + result.ToString();
+            txtBottom.Text = result.ToString();
+
+            // 다음 계산을 위해 준비 (필요시)
+            currentNum = result.ToString();
         }
 
         private void button15_Click(object sender, EventArgs e)
@@ -93,6 +105,21 @@ namespace SimpleCalculator
         {
             txtTop.Text += "0";   // 화면 위쪽에 "1" 찍기
             currentNum += "0";
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            n1 = int.Parse(currentNum); op = "-"; txtTop.Text += "-"; currentNum = "";
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            n1 = int.Parse(currentNum); op = "*"; txtTop.Text += "*"; currentNum = "";
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            n1 = int.Parse(currentNum); op = "/"; txtTop.Text += "/"; currentNum = "";
         }
     }
 }

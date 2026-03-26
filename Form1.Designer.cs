@@ -97,6 +97,7 @@
             button4.TabIndex = 3;
             button4.Text = "÷";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button5
             // 
@@ -108,6 +109,7 @@
             button5.TabIndex = 7;
             button5.Text = "X";
             button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
             // 
             // btn9
             // 
@@ -242,6 +244,7 @@
             button17.TabIndex = 19;
             button17.Text = "-";
             button17.UseVisualStyleBackColor = true;
+            button17.Click += button17_Click;
             // 
             // btncoco
             // 
@@ -287,6 +290,7 @@
             // 
             // txtTop
             // 
+            txtTop.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
             txtTop.Location = new Point(32, 103);
             txtTop.Multiline = true;
             txtTop.Name = "txtTop";
@@ -295,6 +299,7 @@
             // 
             // txtBottom
             // 
+            txtBottom.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
             txtBottom.Location = new Point(32, 163);
             txtBottom.Multiline = true;
             txtBottom.Name = "txtBottom";
