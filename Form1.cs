@@ -12,7 +12,16 @@ namespace SimpleCalculator
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (txtTop.Text.Length >= currentNum.Length)
+            {
+                txtTop.Text = txtTop.Text.Substring(0, txtTop.Text.Length - currentNum.Length);
+            }
 
+            // 2. 지금 입력 중인 숫자 메모장만 비웁니다.
+            currentNum = "";
+
+            // 3. 아래쪽 결과창은 다시 0으로 보여줍니다.
+            txtBottom.Text = "0";
         }
 
         private void btn1_Click(object sender, EventArgs e)
@@ -120,6 +129,31 @@ namespace SimpleCalculator
         private void button4_Click(object sender, EventArgs e)
         {
             n1 = int.Parse(currentNum); op = "/"; txtTop.Text += "/"; currentNum = "";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            n1 = 0;             // 저장된 첫 번째 숫자 삭제
+            currentNum = "";    // 지금 쓰고 있던 숫자 삭제
+            op = "";            // 기억하던 연산자(+, -, *, /) 삭제
+
+            txtTop.Text = "";    // 위쪽 텍스트박스 비우기
+            txtBottom.Text = "0";
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (currentNum.Length > 0)
+            {
+                // 1. 메모장(currentNum)에서 맨 뒤 한 글자 삭제
+                currentNum = currentNum.Substring(0, currentNum.Length - 1);
+
+                // 2. 위쪽 화면(txtTop)에서도 맨 뒤 한 글자 삭제
+                txtTop.Text = txtTop.Text.Substring(0, txtTop.Text.Length - 1);
+
+                // 3. 아래쪽 결과창 업데이트 (다 지워졌으면 0으로 표시)
+                txtBottom.Text = (currentNum == "") ? "0" : currentNum;
+            }
         }
     }
 }

@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
+            btnCE = new Button();
+            btnC = new Button();
+            btnDel = new Button();
             button4 = new Button();
             button5 = new Button();
             btn9 = new Button();
@@ -53,39 +53,41 @@
             txtBottom = new TextBox();
             SuspendLayout();
             // 
-            // button1
+            // btnCE
             // 
-            button1.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            button1.ForeColor = Color.FromArgb(0, 192, 0);
-            button1.Location = new Point(26, 221);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 44);
-            button1.TabIndex = 0;
-            button1.Text = "CE";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btnCE.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            btnCE.ForeColor = Color.FromArgb(0, 192, 0);
+            btnCE.Location = new Point(26, 221);
+            btnCE.Name = "btnCE";
+            btnCE.Size = new Size(75, 44);
+            btnCE.TabIndex = 0;
+            btnCE.Text = "CE";
+            btnCE.UseVisualStyleBackColor = true;
+            btnCE.Click += button1_Click;
             // 
-            // button2
+            // btnC
             // 
-            button2.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            button2.ForeColor = Color.FromArgb(255, 128, 255);
-            button2.Location = new Point(107, 221);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 44);
-            button2.TabIndex = 1;
-            button2.Text = "C";
-            button2.UseVisualStyleBackColor = true;
+            btnC.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            btnC.ForeColor = Color.FromArgb(255, 128, 255);
+            btnC.Location = new Point(107, 221);
+            btnC.Name = "btnC";
+            btnC.Size = new Size(75, 44);
+            btnC.TabIndex = 1;
+            btnC.Text = "C";
+            btnC.UseVisualStyleBackColor = true;
+            btnC.Click += button2_Click;
             // 
-            // button3
+            // btnDel
             // 
-            button3.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            button3.ForeColor = Color.Cyan;
-            button3.Location = new Point(188, 221);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 44);
-            button3.TabIndex = 2;
-            button3.Text = "DEL";
-            button3.UseVisualStyleBackColor = true;
+            btnDel.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            btnDel.ForeColor = Color.Cyan;
+            btnDel.Location = new Point(188, 221);
+            btnDel.Name = "btnDel";
+            btnDel.Size = new Size(75, 44);
+            btnDel.TabIndex = 2;
+            btnDel.Text = "DEL";
+            btnDel.UseVisualStyleBackColor = true;
+            btnDel.Click += button3_Click;
             // 
             // button4
             // 
@@ -332,9 +334,9 @@
             Controls.Add(btn8);
             Controls.Add(btn7);
             Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btnDel);
+            Controls.Add(btnC);
+            Controls.Add(btnCE);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
@@ -343,9 +345,9 @@
 
         #endregion
 
-        private Button button1;
-        private Button button2;
-        private Button button3;
+        private Button btnCE;
+        private Button btnC;
+        private Button btnDel;
         private Button button4;
         private Button button5;
         private Button btn9;
