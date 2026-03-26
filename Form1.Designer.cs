@@ -97,6 +97,7 @@
             // button5
             // 
             button5.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            button5.ForeColor = Color.FromArgb(255, 128, 128);
             button5.Location = new Point(269, 271);
             button5.Name = "button5";
             button5.Size = new Size(75, 44);
@@ -140,6 +141,7 @@
             // btnEqual
             // 
             btnEqual.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            btnEqual.ForeColor = Color.FromArgb(192, 0, 192);
             btnEqual.Location = new Point(269, 417);
             btnEqual.Name = "btnEqual";
             btnEqual.Size = new Size(75, 44);
@@ -184,6 +186,7 @@
             // btnPlus
             // 
             btnPlus.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            btnPlus.ForeColor = Color.Blue;
             btnPlus.Location = new Point(269, 371);
             btnPlus.Name = "btnPlus";
             btnPlus.Size = new Size(75, 44);
@@ -228,6 +231,7 @@
             // button17
             // 
             button17.Font = new Font("맑은 고딕", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            button17.ForeColor = Color.FromArgb(255, 255, 128);
             button17.Location = new Point(269, 321);
             button17.Name = "button17";
             button17.Size = new Size(75, 44);
