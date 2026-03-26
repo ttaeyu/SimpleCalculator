@@ -270,7 +270,7 @@
             // 
             SimpleCalculator.AutoSize = true;
             SimpleCalculator.Font = new Font("맑은 고딕", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            SimpleCalculator.ForeColor = Color.FromArgb(255, 255, 128);
+            SimpleCalculator.ForeColor = Color.Red;
             SimpleCalculator.Location = new Point(32, 41);
             SimpleCalculator.Name = "SimpleCalculator";
             SimpleCalculator.Size = new Size(231, 37);
